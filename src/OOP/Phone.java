@@ -1,6 +1,6 @@
 package OOP;
 
-public class Phone {
+public class Phone implements Comparable<Phone> {
     private String number;
     private String model;
     private double weight;
@@ -55,5 +55,19 @@ public class Phone {
     public Phone(String number, String model, double weight) {
         this(number, model);
         this.weight = weight;
+    }
+
+    @Override
+    public int compareTo(Phone o) {
+        return Double.compare(this.getWeight(), o.getWeight());
+    }
+
+    @Override
+    public String toString() {
+        return "Phone{" +
+                "number='" + number + '\'' +
+                ", model='" + model + '\'' +
+                ", weight=" + weight +
+                '}';
     }
 }

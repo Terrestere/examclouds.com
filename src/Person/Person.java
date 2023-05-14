@@ -22,7 +22,7 @@ public class Person {
         this.age = age;
     }
 
-    protected Person(String fullName, int age, boolean retired) {
+    public Person(String fullName, int age, boolean retired) {
         this.fullName = fullName;
         this.age = age;
         this.retired = retired;
